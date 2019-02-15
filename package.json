@@ -1,0 +1,25 @@
+{
+  "name": "megalo-api-types",
+  "version": "1.0.1",
+  "description": "megalo/api项目的描述文件",
+  "main": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiNISAL/megalo-api-types.git"
+  },
+  "keywords": [
+    "megalo-api",
+    "typescript",
+    "@megalo/api",
+    "@types/megalo-api"
+  ],
+  "author": "NISAL",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiNISAL/megalo-api-types/issues"
+  },
+  "homepage": "https://github.com/hiNISAL/megalo-api-types#readme"
+}
