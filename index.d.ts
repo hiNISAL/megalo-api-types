@@ -1,4 +1,13 @@
 declare namespace Megalo {
+  interface BaseOptions {
+    /** 接口调用成功的回调函数 */
+    success?(),
+    /** 接口调用失败的回调函数 */
+    fail?(),
+    /** 接口调用结束的回调函数（调用成功、失败都会执行 */
+    complete?(), 
+  }
+
   /**
    * 发起网络请求，支持 Promise 化使用。不支持H5环境。
    */
@@ -367,4 +376,125 @@ declare namespace Megalo {
     complete?(),
   }) : Promise<any>;
   
+
+  /** 将数据存储在本地缓存中指定的 key 中，会覆盖掉原来该 key 对应的内容，这是一个异步接口，支持 Promise 化使用。 */
+  function setStorage(object: {
+    /** 本地缓存中的指定的 key */
+    key: string,
+    /** 需要存储的内容 */
+    data: {} | string,
+    /** 接口调用成功的回调函数 */
+    success?(),
+    /** 接口调用失败的回调函数 */
+    fail?(),
+    /** 接口调用结束的回调函数（调用成功、失败都会执行） */
+    complete?(),
+  }): Promise<any>;
+
+
+  /** 将 data 存储在本地缓存中指定的 key 中，会覆盖掉原来该 key 对应的内容，这是一个同步接口。 */
+  function setStorageSync(key: string, data: {} | string);
+
+
+  /** 从本地缓存中异步获取指定 key 对应的内容，支持 Promise 化使用。 */
+  function getStorage(options: {
+    /** 本地缓存中的指定的 key */
+    key: string,
+    /** 接口调用成功的回调函数 */
+    success?(),
+    /** 接口调用失败的回调函数 */
+    fail?(),
+    /** 接口调用结束的回调函数（调用成功、失败都会执行） */
+    complete?(),
+  }) : Promise<any>;
+
+  
+  /** 从本地缓存中同步获取指定 key 对应的内容。 */
+  function getStorageSync(options: {
+    /** 本地缓存中的指定的 key */
+    key: string,
+  });
+
+
+  /** 异步获取当前 storage 的相关信息，支持 Promise 化使用。 */
+  function getStorageInfo(options: {
+    /** 本地缓存中的指定的 key */
+    key: string,
+    /** 接口调用成功的回调函数 */
+    success?(),
+    /** 接口调用失败的回调函数 */
+    fail?(),
+    /** 接口调用结束的回调函数（调用成功、失败都会执行） */
+    complete?(),
+  });
+
+
+  /** 同步获取当前 storage 的相关信息。 */
+  function getStorageInfoSync();
+
+
+  /** 从本地缓存中异步移除指定 key，支持 Promise 化使用。 */
+  function removeStorage(options: {
+    /** 本地缓存中的指定的 key */
+    keys: string,
+    /** 接口调用成功的回调函数 */
+    success?(),
+    /** 接口调用失败的回调函数 */
+    fail?(),
+    /** 接口调用结束的回调函数（调用成功、失败都会执行） */
+    complete?(),
+  });
+
+
+  /** 从本地缓存中同步移除指定 key 。 */
+  function removeStorageSync(key: string);
+
+
+  /** 清理本地数据缓存。 */
+  function clearStorage();
+
+
+  /** 同步清理本地数据缓存 */
+  function clearStorageSync();
+
+
+  /** 使用方式同 wx.getLocation，支持 Promise 化使用。不支持H5平台 */
+  function getLocation(options: {
+    /** wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标 */
+    type?: string,
+    /** 传入 true 会返回高度信息，由于获取高度需要较高精确度，会减慢接口返回速度 */
+    altitude?: string,
+    /** 接口调用成功的回调函数 */
+    success?(),
+    /** 接口调用失败的回调函数 */
+    fail?(),
+    /** 接口调用结束的回调函数（调用成功、失败都会执行） */
+    complete?(),
+  }) : Promise<any>;
+
+
+  /** 打开地图选择位置 支持 Promise 化使用。不支持头条、H5 */
+  function chooseLocation(options: {
+    /** 接口调用成功的回调函数 */
+    success?(),
+    /** 接口调用失败的回调函数 */
+    fail?(),
+    /** 接口调用结束的回调函数（调用成功、失败都会执行） */
+    complete?(),
+  }) : Promise<any>;
+
+
+  /** 使用微信内置地图查看位置 支持 Promise 化使用。不支持H5 */
+  function openLocation(options: {
+    /** 纬度，范围为-90~90，负数表示南纬。使用 gcj02 国测局坐标系 */
+    latitude: number,
+    /** 经度，范围为-180~180，负数表示西经。使用 gcj02 国测局坐标系 */
+    longitude: number,
+    /** 接口调用成功的回调函数 */
+    success?(),
+    /** 接口调用失败的回调函数 */
+    fail?(),
+    /** 接口调用结束的回调函数（调用成功、失败都会执行） */
+    complete?(),
+  }) : Promise<any>;
 }
