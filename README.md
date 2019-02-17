@@ -2,7 +2,7 @@
 
 [@megalo/api](https://github.com/megalojs/megalo-api#readme)项目的描述文件支持
 
-**仅实现了部分，目前正在更新当中，进度65%**
+目前文档中的所有API都已覆盖（不保证有漏网的，也有可能部分api参数的可选属性变成了必填属性，可以提在[issues](https://github.com/hiNISAL/megalo-api-types/issues)中，第一时间修改）
 
 第一期工程会忽略大部分返回值，只提供`Megalo`暴露的方法以及参数。
 
