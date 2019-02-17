@@ -1697,4 +1697,16 @@ declare namespace Megalo {
     /** 接口调用结束的回调函数（调用成功、失败都会执行） */
     complete?(), 
   }) : Promise<any>;
+
+  const ENV_TYPE: {
+    ALIPAY: 'alipay',
+    SWAN: 'swan',
+    TT: 'tt',
+    WEB: 'web',
+    WECHAT: 'wechat',
+  };
+
+
+  /** 获取当前环境值，具体值可以查看 Megalo.ENV_TYPE */
+  function getEnv() : string;
 }
