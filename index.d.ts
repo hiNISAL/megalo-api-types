@@ -13,7 +13,7 @@ declare namespace Megalo {
    */
   function request(options?: {
     /** 开发者服务器接口地址 url */
-    path: string,
+    url: string,
     /** 请求的参数 */
     data?: object|string|any[],
     /** 设置请求的 header，header 中不能设置 Referer。content-type 默认为 application/json */
