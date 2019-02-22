@@ -515,7 +515,36 @@ declare namespace Megalo {
 
 
   /** 获取系统信息同步接口。部分返回值参数H5不支持 */
-  function getSystemInfoSync();
+  function getSystemInfoSync(): {
+    /** 手机品牌 */
+		brand: string;
+		/** 手机型号 */
+		model: string;
+		/** 设备像素比 */
+		pixelRatio: number;
+		/** 屏幕宽度 */
+		screenWidth: number;
+		/** 屏幕高度 */
+		screenHeight: number;
+		/** 窗口宽度 */
+		windowWidth: number;
+		/** 窗口高度 */
+		windowHeight: number;
+		/** 状态栏的高度 */
+		statusBarHeight: number;
+		/** 微信设置的语言 */
+		language: string;
+		/** 微信版本号 */
+		version: string;
+		/** 操作系统版本 */
+		system: string;
+		/** 客户端平台 */
+		platform: string;
+		/** 用户字体大小设置。以“我-设置-通用-字体大小”中的设置为准，单位 px。 */
+		fontSizeSetting: number;
+		/** 客户端基础库版本 */
+		SDKVersion: string;
+  };
 
 
   /** 判断小程序的API，回调，参数，组件等是否在当前版本可用。不支持头条与H5 */

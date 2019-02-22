@@ -25,3 +25,9 @@ npm i megalo-api-types -D
   }
 }
 ```
+
+## 日志
+
+## 20190222
+
+- `getSystemInfoSync` 返回值增加
