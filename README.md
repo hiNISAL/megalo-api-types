@@ -28,6 +28,10 @@ npm i megalo-api-types -D
 
 ## 日志
 
+## 20190328
+
+- 修复`Megalo.downloadFile`方法描述
+
 ## 20190223
 
 - 同步官方文档

@@ -63,11 +63,11 @@ declare namespace Megalo {
   /**
    * 下载文件资源到本地。客户端直接发起一个 HTTPS GET 请求，返回文件的本地临时路径。不支持H5环境
    */
-  function uploadFile(options?: {
+  function downloadFile(options?: {
     /** 开发者服务器地址 */
     url: string,
     /** 要上传文件资源的路径 */
-    filePath: string,
+    filePath?: string,
     /** HTTP 请求 Header，Header 中不能设置 Referer */
     header?: object,
     /** HTTP 请求中其他额外的 form data */
