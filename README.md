@@ -28,6 +28,11 @@ npm i megalo-api-types -D
 
 ## 日志
 
+## 20190417
+
+- 修改`ENV_TYPE`中的`tt`为`头条`
+- h5支持`setNavigationBarTitle`方法
+
 ## 20190328
 
 - 修复`Megalo.downloadFile`方法描述

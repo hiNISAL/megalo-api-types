@@ -1286,7 +1286,7 @@ declare namespace Megalo {
   }) : Promise<any>;
 
 
-  /** 动态设置当前页面的标题，支持 Promise 化使用。不支持H5 */
+  /** 动态设置当前页面的标题，支持 Promise 化使用。 */
   function setNavigationBarTitle(options?: {
     /** 页面标题 */
     title: string,
@@ -1734,7 +1734,7 @@ declare namespace Megalo {
   const ENV_TYPE: {
     ALIPAY: 'alipay',
     SWAN: 'swan',
-    TT: 'tt',
+    TOUTIAO: 'toutiao',
     WEB: 'web',
     WECHAT: 'wechat',
   };
