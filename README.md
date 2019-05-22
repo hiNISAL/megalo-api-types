@@ -8,6 +8,8 @@
 
 微信小程序相关的描述可以使用`@types/weixin-api`或者`wechat-mp-types`。
 
+目前对应的官方版本：`0.5.3`
+
 ## 安装
 
 ``` shell
@@ -28,9 +30,13 @@ npm i megalo-api-types -D
 
 ## 日志
 
+## 20190522
+
+- 没什么改动，只是看官方修了几个bug，我也跟着一起发个版
+
 ## 20190417
 
-- 修改`ENV_TYPE`中的`tt`为`头条`
+- 修改`ENV_TYPE`中的`tt`为`TOUTIAO`
 - h5支持`setNavigationBarTitle`方法
 
 ## 20190328
