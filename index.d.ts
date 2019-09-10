@@ -1547,6 +1547,8 @@ declare namespace Megalo {
     complete?(), 
   }) : Promise<any>;
 
+  /** 获取菜单按钮。支持微信和百度小程序*/
+  function getMenuButtonBoundingClientRect();
 
   /** 停止当前页面下拉刷新。不支持H5 */
   function stopPullDownRefresh();

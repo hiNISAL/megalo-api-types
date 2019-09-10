@@ -8,7 +8,7 @@
 
 微信小程序相关的描述可以使用`@types/weixin-api`或者`wechat-mp-types`。
 
-目前对应的官方版本：`0.5.6`
+目前对应的官方版本：`0.5.7`
 
 ## 安装
 
@@ -29,6 +29,11 @@ npm i megalo-api-types -D
 ```
 
 ## 日志
+
+## 20190910
+
+- 增加`Megalo.getMenuButtonBoundingClientRect`
+- 同步官方版本
 
 ## 20190621
 
